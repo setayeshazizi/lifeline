@@ -226,4 +226,32 @@
     </div>
   </section>
 
+  <!-- ===================== BLOOD TYPE COMPATIBILITY ===================== -->
+  <section class="section" aria-labelledby="bloodtype-heading">
+    <div class="container">
+      <div class="text-center mb-5 reveal">
+        <span class="eyebrow">Know Your Type</span>
+        <h2 class="section-title" id="bloodtype-heading">Blood type compatibility, made simple.</h2>
+        <p class="section-lead">Select a blood group to quickly see who it can help — and who can help them.</p>
+      </div>
+
+      <div class="bloodtype-grid reveal" id="homeBloodGrid" role="group" aria-label="Select a blood type">
+        <!-- Blood cards are rendered by JavaScript -->
+      </div>
+
+      <div class="blood-info-panel reveal" id="homeBloodPanel" aria-live="polite">
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="panel-title"><i class="bi bi-box-arrow-up" aria-hidden="true"></i> Type <span id="panelSelectedType">O+</span> can donate to</div>
+            <div id="panelDonateTo"></div>
+          </div>
+          <div class="col-md-6">
+            <div class="panel-title"><i class="bi bi-box-arrow-in-down" aria-hidden="true"></i> Type <span id="panelReceiveType">O+</span> can receive from</div>
+            <div id="panelReceiveFrom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
