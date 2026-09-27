@@ -1,1 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Lifeline — One donation. One connection. One more life. Connect with blood donors and blood requests faster.">
+    <title>Lifeline — One donation. One connection. One more life.</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/photo_2026-09-27_14-04-06.jpg">
+</head>
+
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar navbar-expand-lg navbar-lifeline fixed-top" aria-label="Main navigation">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" aria-label="Lifeline home">
+                <span class="brand-logo" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" role="img">
+                        <path class="drop-shape"
+                            d="M12 2.6c3.1 3.6 5.4 6.4 5.4 9.2a5.4 5.4 0 1 1-10.8 0c0-2.8 2.3-5.6 5.4-9.2z" />
+                        <path class="pulse-line" d="M4.5 13h3l1.6-3 2.4 5 1.8-2h6.2" />
+                    </svg>
+                </span>
+                Lifeline
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="find-blood.html">Find Blood</a></li>
+                    <li class="nav-item"><a class="nav-link" href="donate.html">Become a Donor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                </ul>
+                <a href="donate.html" class="btn btn-red btn-sm navbar-cta">
+                    <i class="bi bi-droplet-fill" aria-hidden="true"></i> Donate Blood
+                </a>
+                <button type="button" class="theme-toggle ms-lg-2 mt-3 mt-lg-0" aria-label="Switch to dark mode">
+                    <i class="bi bi-moon-fill" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <header class="hero">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6">
+                    <span class="live-badge">
+                        <span class="live-dot"><i class="bi bi-heart-pulse" aria-hidden="true"></i></span>
+                        <span class="live-text">LIVE — Blood requests are being updated</span>
+                    </span>
+                    <h1>Your Blood Can Become Someone's <span class="text-red">Lifeline.</span></h1>
+                    <p class="hero-sub">Connect with people who need your blood. Find compatible donors faster. Make
+                        every donation count.</p>
+                    <div class="hero-actions">
+                        <a href="find-blood.html" class="btn btn-red btn-lg" data-pulse-link>
+                            <i class="bi bi-search-heart" aria-hidden="true"></i> Find Blood
+                        </a>
+                        <a href="donate.html" class="btn btn-outline btn-lg">Become a Donor</a>
+                    </div>
+                    <span class="hero-trust">
+                        <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i>
+                        Every minute matters.
+                    </span>
+
+                    <div class="lives-pill" role="status">
+                        <i class="bi bi-heart-fill lives-icon" aria-hidden="true"></i>
+                        <span class="lives-number stat-number" data-target="127">0</span>
+                        <span class="lives-text">lives connected this month</span>
+                    </div>
+
+                    <div class="hero-pulse" aria-hidden="true">
+                        <svg viewBox="0 0 600 60" preserveAspectRatio="xMidYMid meet">
+                            <path class="pulse-track"
+                                d="M0,30 L150,30 L168,30 L182,8 L198,52 L212,30 L260,30 L274,20 L288,40 L302,30 L600,30" />
+                            <path class="pulse-draw"
+                                d="M0,30 L150,30 L168,30 L182,8 L198,52 L212,30 L260,30 L274,20 L288,40 L302,30 L600,30" />
+                            <g class="pulse-drop-g">
+                                <circle class="pulse-drop" r="5.5" cx="0" cy="0" />
+                                <animateMotion dur="4.2s" repeatCount="indefinite"
+                                    path="M0,30 L150,30 L168,30 L182,8 L198,52 L212,30 L260,30 L274,20 L288,40 L302,30 L600,30" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="hero-visual">
+                        <div class="hero-float-card float-card-1">
+                            <span class="icon-wrap"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+                            <span>
+                                <span class="float-title d-block">12,400+ Donors</span>
+                                <span class="float-sub">ready to help nearby</span>
+                            </span>
+                        </div>
+                        <div class="hero-float-card float-card-2">
+                            <span class="icon-wrap"><i class="bi bi-lightning-charge-fill"
+                                    aria-hidden="true"></i></span>
+                            <span>
+                                <span class="float-title d-block">Emergency Mode</span>
+                                <span class="float-sub">critical requests prioritized</span>
+                            </span>
+                        </div>
+                        <div class="hero-img-wrap">
+                            <img src="assets/hero-home.png"
+                                alt="A healthcare professional gently holding a patient's hand, symbolizing human connection and care">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===================== STATISTICS ===================== -->
+    <section class="section" aria-labelledby="stats-heading">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <span class="eyebrow">Our Impact</span>
+                <h2 class="section-title" id="stats-heading">Real numbers. Real connections.</h2>
+                <p class="section-lead">A living network of donors, requests and successful matches — growing every day.
+                </p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card reveal">
+                    <span class="stat-icon"><i class="bi bi-clipboard2-pulse" aria-hidden="true"></i></span>
+                    <div class="stat-number" data-target="2847" data-suffix="">0</div>
+                    <div class="stat-label">Active Blood Requests</div>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-icon"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+                    <div class="stat-number" data-target="12483" data-suffix="+">0</div>
+                    <div class="stat-label">Registered Donors</div>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-icon"><i class="bi bi-link-45deg" aria-hidden="true"></i></span>
+                    <div class="stat-number" data-target="9260" data-suffix="">0</div>
+                    <div class="stat-label">Successful Connections</div>
+                </div>
+                <div class="stat-card reveal">
+                    <span class="stat-icon"><i class="bi bi-heart-fill" aria-hidden="true"></i></span>
+                    <div class="stat-number" data-target="18520" data-suffix="+">0</div>
+                    <div class="stat-label">Lives Supported</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== HOW LIFELINE WORKS ===================== -->
+    <section class="section section-gray" aria-labelledby="how-heading">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <span class="eyebrow">How Lifeline Works</span>
+                <h2 class="section-title" id="how-heading">From urgent need to life-saving connection.</h2>
+                <p class="section-lead">Three simple steps stand between a request and a donation.</p>
+            </div>
+
+            <div class="steps-grid">
+                <article class="step-card reveal">
+                    <span class="step-num" aria-hidden="true">01</span>
+                    <span class="step-icon"><i class="bi bi-send-fill" aria-hidden="true"></i></span>
+                    <h3>Request</h3>
+                    <p>Submit the blood type, location and urgency.</p>
+                </article>
+
+                <article class="step-card reveal">
+                    <span class="step-num" aria-hidden="true">02</span>
+                    <span class="step-icon"><i class="bi bi-crosshair" aria-hidden="true"></i></span>
+                    <h3>Match</h3>
+                    <p>Lifeline helps identify compatible nearby donors.</p>
+                </article>
+
+                <article class="step-card reveal">
+                    <span class="step-num" aria-hidden="true">03</span>
+                    <span class="step-icon"><i class="bi bi-chat-heart-fill" aria-hidden="true"></i></span>
+                    <h3>Connect</h3>
+                    <p>Contact the donor or blood center and coordinate the donation.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== LIFELINE NETWORK ===================== -->
+    <section class="section section-dark network-section" aria-labelledby="network-heading">
+        <div class="container">
+            <div class="text-center mb-2 reveal">
+                <span class="eyebrow">The Lifeline Network</span>
+                <h2 class="section-title" id="network-heading">Four connections. One lifeline.</h2>
+                <p class="section-lead">Hover or focus each node to see how the network moves — from a willing donor to
+                    a patient in need.</p>
+            </div>
+
+            <div class="network-map reveal">
+                <div class="network-node" tabindex="0">
+                    <span class="node-circle"><i class="bi bi-person-heart" aria-hidden="true"></i></span>
+                    <span class="node-label">Donor</span>
+                    <span class="node-tooltip" role="tooltip">A registered donor marks their blood type, city and
+                        availability.</span>
+                </div>
+                <span class="network-link" aria-hidden="true"></span>
+                <div class="network-node node-core" tabindex="0">
+                    <span class="node-circle"><i class="bi bi-crosshair" aria-hidden="true"></i></span>
+                    <span class="node-label">Match</span>
+                    <span class="node-tooltip" role="tooltip">Lifeline pairs compatible blood types with nearby, active
+                        requests.</span>
+                </div>
+                <span class="network-link" aria-hidden="true"></span>
+                <div class="network-node" tabindex="0">
+                    <span class="node-circle"><i class="bi bi-hospital" aria-hidden="true"></i></span>
+                    <span class="node-label">Hospital</span>
+                    <span class="node-tooltip" role="tooltip">The blood center or hospital confirms need and coordinates
+                        safely.</span>
+                </div>
+                <span class="network-link" aria-hidden="true"></span>
+                <div class="network-node" tabindex="0">
+                    <span class="node-circle"><i class="bi bi-heart-pulse" aria-hidden="true"></i></span>
+                    <span class="node-label">Blood Request</span>
+                    <span class="node-tooltip" role="tooltip">A patient receives the donation they were waiting
+                        for.</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== BLOOD TYPE COMPATIBILITY ===================== -->
+    <section class="section" aria-labelledby="bloodtype-heading">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <span class="eyebrow">Know Your Type</span>
+                <h2 class="section-title" id="bloodtype-heading">Blood type compatibility, made simple.</h2>
+                <p class="section-lead">Select a blood group to quickly see who it can help — and who can help them.</p>
+            </div>
+
+            <div class="bloodtype-grid reveal" id="homeBloodGrid" role="group" aria-label="Select a blood type">
+                <!-- Blood cards are rendered by JavaScript -->
+            </div>
+
+            <div class="blood-info-panel reveal" id="homeBloodPanel" aria-live="polite">
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="panel-title"><i class="bi bi-box-arrow-up" aria-hidden="true"></i> Type <span
+                                id="panelSelectedType">O+</span> can donate to</div>
+                        <div id="panelDonateTo"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="panel-title"><i class="bi bi-box-arrow-in-down" aria-hidden="true"></i> Type <span
+                                id="panelReceiveType">O+</span> can receive from</div>
+                        <div id="panelReceiveFrom"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== WHY LIFELINE ===================== -->
+    <section class="section section-gray" aria-labelledby="why-heading">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <span class="eyebrow">Why Lifeline</span>
+                <h2 class="section-title" id="why-heading">Built for the moment it matters most.</h2>
+                <p class="section-lead">Every design decision serves one goal: connecting compatible people faster.</p>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-md-4 reveal" data-delay="0">
+                    <article class="why-card">
+                        <span class="why-icon"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i></span>
+                        <h3>Fast Connection</h3>
+                        <p>Emergency Mode surfaces critical requests first, so seconds are never wasted scrolling.</p>
+                    </article>
+                </div>
+                <div class="col-md-4 reveal" data-delay="100">
+                    <article class="why-card">
+                        <span class="why-icon"><i class="bi bi-diagram-3-fill" aria-hidden="true"></i></span>
+                        <h3>Smart Matching</h3>
+                        <p>Compatibility is checked the moment a request is posted — no guessing, no phone trees.</p>
+                    </article>
+                </div>
+                <div class="col-md-4 reveal" data-delay="200">
+                    <article class="why-card">
+                        <span class="why-icon"><i class="bi bi-heart-fill" aria-hidden="true"></i></span>
+                        <h3>Human Impact</h3>
+                        <p>Behind every request is a person. Behind every donation, a second chance at life.</p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TRUST & SAFETY ===================== -->
+    <section class="section" aria-labelledby="trust-heading">
+        <div class="container">
+            <div class="text-center mb-5 reveal">
+                <span class="eyebrow">Trust &amp; Safety</span>
+                <h2 class="section-title" id="trust-heading">Built around trust.</h2>
+                <p class="section-lead">Principles that guide how this demo platform is designed — and how a real one
+                    should be.</p>
+            </div>
+
+            <div class="trust-panel reveal">
+                <div class="row g-4">
+                    <div class="col-md-6 reveal" data-delay="0">
+                        <div class="trust-item">
+                            <span class="trust-icon"><i class="bi bi-shield-lock-fill" aria-hidden="true"></i></span>
+                            <div>
+                                <h3>Privacy-First Design</h3>
+                                <p>Donor details stay in your browser in this demo — no accounts, no servers, no
+                                    tracking.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 reveal" data-delay="100">
+                        <div class="trust-item">
+                            <span class="trust-icon"><i class="bi bi-card-checklist" aria-hidden="true"></i></span>
+                            <div>
+                                <h3>Transparent Information</h3>
+                                <p>Every request shows its type, amount, component and urgency clearly — demo data is
+                                    always labeled as fictional.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 reveal" data-delay="200">
+                        <div class="trust-item">
+                            <span class="trust-icon"><i class="bi bi-exclamation-triangle-fill"
+                                    aria-hidden="true"></i></span>
+                            <div>
+                                <h3>Clear Emergency Status</h3>
+                                <p>Critical, urgent and normal requests are visually distinct, so real emergencies never
+                                    blend in.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 reveal" data-delay="300">
+                        <div class="trust-item">
+                            <span class="trust-icon"><i class="bi bi-hand-thumbs-up-fill" aria-hidden="true"></i></span>
+                            <div>
+                                <h3>Responsible Data Handling</h3>
+                                <p>Only sample data is ever used here — never real patient or medical information.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== EMERGENCY CTA ===================== -->
+    <section class="section-tight" aria-labelledby="cta-heading">
+        <div class="container">
+            <div class="emergency-cta reveal">
+                <h2 id="cta-heading">Someone may be waiting for <span style="color:#FF8A90;">your blood.</span></h2>
+                <p>Right now, a compatible donor could change everything for a patient in need. Registration takes less
+                    than two minutes.</p>
+                <a href="donate.html" class="btn btn-red btn-lg">
+                    <i class="bi bi-droplet-fill" aria-hidden="true"></i> Donate Now
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6">
+                    <a class="footer-brand" href="index.html">
+                        <span class="brand-logo" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" role="img">
+                                <path class="drop-shape"
+                                    d="M12 2.6c3.1 3.6 5.4 6.4 5.4 9.2a5.4 5.4 0 1 1-10.8 0c0-2.8 2.3-5.6 5.4-9.2z" />
+                                <path class="pulse-line" d="M4.5 13h3l1.6-3 2.4 5 1.8-2h6.2" />
+                            </svg>
+                        </span>
+                        Lifeline
+                    </a>
+                    <p class="footer-desc">One donation. One connection. One more life. A digital bridge between blood
+                        donors, people in need and blood centers.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Lifeline on X (Twitter)"><i class="bi bi-twitter-x"
+                                aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Lifeline on Instagram"><i class="bi bi-instagram"
+                                aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Lifeline on LinkedIn"><i class="bi bi-linkedin"
+                                aria-hidden="true"></i></a>
+                        <a href="#" aria-label="Lifeline on Facebook"><i class="bi bi-facebook"
+                                aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-lg-2 col-md-6 col-6">
+                    <h6>Navigate</h6>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="find-blood.html">Find Blood</a></li>
+                        <li><a href="donate.html">Become a Donor</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 col-6">
+                    <h6>Contact</h6>
+                    <ul class="footer-contact">
+                        <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Lifeline HQ, Herat, Afghanistan</li>
+                        <li><i class="bi bi-envelope-fill" aria-hidden="true"></i> hello@lifeline.demo</li>
+                        <li><i class="bi bi-telephone-fill" aria-hidden="true"></i> +93 700 000 000</li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <h6>Emergency</h6>
+                    <div class="footer-emergency">
+                        <div class="emergency-title"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i>
+                            Need blood urgently?</div>
+                        <p>Open Find Blood to search active requests, or contact your nearest blood center immediately.
+                            In life-threatening situations, always call local emergency services first.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+                <span>© 2026 Lifeline. A student demo project — all data is fictional.</span>
+                <span>Built with care for a healthier world.</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
