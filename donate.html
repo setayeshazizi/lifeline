@@ -1,1 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Become a Lifeline donor. A few minutes of your time can make a life-changing difference.">
+  <title>Become a Donor — Lifeline</title>
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="assets/photo_2026-09-27_14-04-06.jpg">
+</head>
+
+<body>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg navbar-lifeline fixed-top" aria-label="Main navigation">
+    <div class="container">
+      <a class="navbar-brand" href="index.html" aria-label="Lifeline home">
+        <span class="brand-logo" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path class="drop-shape" d="M12 2.6c3.1 3.6 5.4 6.4 5.4 9.2a5.4 5.4 0 1 1-10.8 0c0-2.8 2.3-5.6 5.4-9.2z"/>
+            <path class="pulse-line" d="M4.5 13h3l1.6-3 2.4 5 1.8-2h6.2"/>
+          </svg>
+        </span>
+        Lifeline
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="find-blood.html">Find Blood</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="donate.html">Become a Donor</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </ul>
+        <a href="find-blood.html" class="btn btn-red btn-sm navbar-cta">
+          <i class="bi bi-droplet-fill" aria-hidden="true"></i> Request Blood
+        </a>
+      </div>
+    </div>
+  </nav>
+    <!-- ===================== PAGE HERO ===================== -->
+  <header class="page-hero">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <span class="eyebrow">Become a Donor</span>
+          <h1>Be Someone's Reason <span class="text-red">to Live.</span></h1>
+          <p class="lead-text">A few minutes of your time can make a life-changing difference. Join the Lifeline donor network and be there when every second counts.</p>
+          <a href="#donorFormSection" class="btn btn-red btn-lg mt-3">
+            <i class="bi bi-heart-pulse" aria-hidden="true"></i> Register as a Donor
+          </a>
+        </div>
+        <div class="col-lg-6">
+          <div class="donate-hero-visual">
+            <img src="assets/hero-donate.png" alt="A relaxed, smiling blood donor seated in a bright modern donation chair">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+   <main>
+    <!-- ===================== DONOR REGISTRATION FORM ===================== -->
+    <section class="section" id="donorFormSection" aria-labelledby="donor-form-heading">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-9">
+            <div class="text-center mb-5 reveal">
+              <span class="eyebrow justify-content-center">Donor Registration</span>
+              <h2 class="section-title" id="donor-form-heading">Join the Lifeline network.</h2>
+              <p class="section-lead">Fill in your details below. Your information stays on this device for this demo.</p>
+            </div>
+
+            <div class="donor-form-card reveal">
+              <form id="donorForm" novalidate>
+
+                <div class="row g-4">
+                  <!-- Full name -->
+                  <div class="col-md-6">
+                    <label for="donorName" class="form-label">Full Name <span class="text-red">*</span></label>
+                    <input type="text" class="form-control" id="donorName" placeholder="e.g. Ahmad Rahimi" autocomplete="name">
+                    <div class="invalid-feedback">Please enter your full name (at least 3 characters).</div>
+                  </div>
+
+                  <!-- Blood type -->
+                  <div class="col-md-6">
+                    <label for="donorBloodType" class="form-label">Blood Type <span class="text-red">*</span></label>
+                    <select class="form-select" id="donorBloodType">
+                      <option value="" selected>Select your blood type</option>
+                      <option value="A+">A+</option>
+                      <option value="A-">A-</option>
+                      <option value="B+">B+</option>
+                      <option value="B-">B-</option>
+                      <option value="AB+">AB+</option>
+                      <option value="AB-">AB-</option>
+                      <option value="O+">O+</option>
+                      <option value="O-">O-</option>
+                      <option value="Unknown">I don't know yet</option>
+                    </select>
+                    <div class="invalid-feedback">Please select your blood type.</div>
+                  </div>
+
+                  <!-- Age -->
+                  <div class="col-md-6">
+                    <label for="donorAge" class="form-label">Age <span class="text-red">*</span></label>
+                    <input type="number" class="form-control" id="donorAge" placeholder="e.g. 28" min="18" max="65" inputmode="numeric">
+                    <div class="invalid-feedback">Age must be between 18 and 65 for this demo.</div>
+                  </div>
+
+                  <!-- City -->
+                  <div class="col-md-6">
+                    <label for="donorCity" class="form-label">City <span class="text-red">*</span></label>
+                    <input type="text" class="form-control" id="donorCity" placeholder="e.g. Herat" autocomplete="address-level2">
+                    <div class="invalid-feedback">Please enter your city.</div>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="col-md-6">
+                    <label for="donorEmail" class="form-label">Email <span class="text-red">*</span></label>
+                    <input type="email" class="form-control" id="donorEmail" placeholder="you@example.com" autocomplete="email">
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="col-md-6">
+                    <label for="donorPhone" class="form-label">Phone <span class="text-red">*</span></label>
+                    <input type="tel" class="form-control" id="donorPhone" placeholder="+93 700 000 000" autocomplete="tel">
+                    <div class="invalid-feedback">Please enter a valid phone number (7–15 digits).</div>
+                  </div>
+
+                  <!-- Last donation date -->
+                  <div class="col-md-6">
+                    <label for="donorLastDonation" class="form-label">Last Donation Date <span class="text-red">*</span></label>
+                    <input type="date" class="form-control" id="donorLastDonation">
+                    <div class="invalid-feedback">Please select your last donation date (or today if never).</div>
+                  </div>
+
+                  <!-- Availability toggle -->
+                  <div class="col-md-6 d-flex align-items-end">
+                    <div class="availability-box w-100" id="availabilityBox">
+                      <div class="avail-text">
+                        <div class="avail-title" id="availabilityTitle">Available for emergency requests</div>
+                        <p class="avail-sub" id="availabilitySub">You can be contacted when your type is needed.</p>
+                      </div>
+                      <span class="toggle-switch">
+                        <input type="checkbox" id="donorAvailability" role="switch" aria-label="Availability for emergency requests" checked>
+                        <span class="track" aria-hidden="true"></span>
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- Consent -->
+                  <div class="col-12">
+                    <div class="consent-box">
+                      <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="donorConsent">
+                        <label class="form-check-label" for="donorConsent">
+                          I consent to Lifeline storing this information for matching purposes and understand this is a demonstration project. <span class="text-red">*</span>
+                        </label>
+                        <div class="invalid-feedback d-block d-none" id="consentError">You must accept the consent statement to register.</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Submit -->
+                  <div class="col-12 mt-2">
+                    <button type="submit" class="btn btn-red btn-lg w-100 d-inline-flex justify-content-center align-items-center gap-2" id="donorSubmitBtn">
+                      <i class="bi bi-droplet-fill" aria-hidden="true"></i> Register as Donor
+                    </button>
+                  </div>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+   <!-- ===================== BEFORE YOU DONATE ===================== -->
+    <section class="section section-gray" aria-labelledby="before-heading">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="eyebrow justify-content-center">Before You Donate</span>
+          <h2 class="section-title" id="before-heading">Four small steps for a smooth donation.</h2>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="info-card">
+              <span class="info-icon icon-red"><i class="bi bi-cup-straw" aria-hidden="true"></i></span>
+              <h3>Stay Hydrated</h3>
+              <p>Drink plenty of water before and after your donation to help your body feel its best.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="info-card">
+              <span class="info-icon icon-navy"><i class="bi bi-egg-fried" aria-hidden="true"></i></span>
+              <h3>Eat a Healthy Meal</h3>
+              <p>Have a balanced, iron-rich meal a few hours before donating to keep your energy steady.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="info-card">
+              <span class="info-icon icon-red"><i class="bi bi-person-badge-fill" aria-hidden="true"></i></span>
+              <h3>Bring Identification</h3>
+              <p>A valid ID helps the blood center verify your identity and register your donation.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-3 reveal">
+            <article class="info-card">
+              <span class="info-icon icon-navy"><i class="bi bi-journal-medical" aria-hidden="true"></i></span>
+              <h3>Follow Medical Eligibility Guidance</h3>
+              <p>Answer screening questions honestly so professionals can confirm you are ready to donate.</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="medical-note mt-4 reveal">
+          <i class="bi bi-info-circle-fill" aria-hidden="true"></i>
+          <p><strong>Note:</strong> Always follow the guidance of qualified healthcare professionals and blood centers. This page does not provide medical advice or eligibility decisions.</p>
+        </div>
+      </div>
+    </section>
+        <!-- ===================== WHY DONATE ===================== -->
+    <section class="section" aria-labelledby="why-heading">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="eyebrow justify-content-center">Why Donate?</span>
+          <h2 class="section-title" id="why-heading">One donation reaches further than you think.</h2>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="info-card text-center">
+              <span class="info-icon icon-red"><i class="bi bi-heart-fill" aria-hidden="true"></i></span>
+              <h3>Save Lives</h3>
+              <p>A single donation can help multiple patients — from accident victims to surgery patients and new mothers.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="info-card text-center">
+              <span class="info-icon icon-navy"><i class="bi bi-people-fill" aria-hidden="true"></i></span>
+              <h3>Support Your Community</h3>
+              <p>Local hospitals depend on local donors. Your generosity stays close to home and helps neighbors in need.</p>
+            </article>
+          </div>
+          <div class="col-md-6 col-lg-4 reveal">
+            <article class="info-card text-center">
+              <span class="info-icon icon-red"><i class="bi bi-stopwatch-fill" aria-hidden="true"></i></span>
+              <h3>Be There When It Matters</h3>
+              <p>Emergencies don't wait. Being a registered donor means you can be called upon in critical moments.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- ===================== SUCCESS MODAL ===================== -->
+  <div class="modal fade success-modal" id="donorSuccessModal" tabindex="-1" aria-labelledby="donorSuccessTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-body">
+          <span class="success-check"><i class="bi bi-check-lg" aria-hidden="true"></i></span>
+          <h3 id="donorSuccessTitle">You're now part of the Lifeline.</h3>
+          <p>Thank you for choosing to help others. Your registration has been saved on this device.</p>
+          <button type="button" class="btn btn-red btn-lg mt-4" data-bs-dismiss="modal">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 col-md-6">
+          <a class="footer-brand" href="index.html">
+            <span class="brand-logo" aria-hidden="true">
+              <svg viewBox="0 0 24 24" role="img">
+                <path class="drop-shape" d="M12 2.6c3.1 3.6 5.4 6.4 5.4 9.2a5.4 5.4 0 1 1-10.8 0c0-2.8 2.3-5.6 5.4-9.2z"/>
+                <path class="pulse-line" d="M4.5 13h3l1.6-3 2.4 5 1.8-2h6.2"/>
+              </svg>
+            </span>
+            Lifeline
+          </a>
+          <p class="footer-desc">One donation. One connection. One more life. A digital bridge between blood donors, people in need and blood centers.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Lifeline on X (Twitter)"><i class="bi bi-twitter-x" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Lifeline on Instagram"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Lifeline on LinkedIn"><i class="bi bi-linkedin" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Lifeline on Facebook"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 col-6">
+          <h6>Navigate</h6>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="find-blood.html">Find Blood</a></li>
+            <li><a href="donate.html">Become a Donor</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 col-6">
+          <h6>Contact</h6>
+          <ul class="footer-contact">
+            <li><i class="bi bi-geo-alt-fill" aria-hidden="true"></i> Lifeline HQ, Herat, Afghanistan</li>
+            <li><i class="bi bi-envelope-fill" aria-hidden="true"></i> hello@lifeline.demo</li>
+            <li><i class="bi bi-telephone-fill" aria-hidden="true"></i> +93 700 000 000</li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h6>Emergency</h6>
+          <div class="footer-emergency">
+            <div class="emergency-title"><i class="bi bi-exclamation-triangle-fill" aria-hidden="true"></i> Need blood urgently?</div>
+            <p>Open Find Blood to search active requests, or contact your nearest blood center immediately. In life-threatening situations, always call local emergency services first.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom d-flex flex-column flex-md-row justify-content-between gap-2">
+        <span>© 2026 Lifeline. A student demo project — all data is fictional.</span>
+        <span>Built with care for a healthier world.</span>
+      </div>
+    </div>
+  </footer>
+  <!-- Back to top -->
+  <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="bi bi-arrow-up" aria-hidden="true"></i>
+  </button>
+    <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
